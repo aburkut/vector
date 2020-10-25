@@ -13,3 +13,7 @@ matrix:
       script:
         - npm run lint
         - npm test
+      after_script:
+        - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]] || [[ "$TRAVIS_BRANCH" == "master"
+          ]]; then npm run upload:coverage; else echo "coverage upload is not required";
+          fi;
