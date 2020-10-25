@@ -1,6 +1,6 @@
 # Vector [![Build Status](https://travis-ci.com/aburkut/vector.svg?branch=master)](https://travis-ci.com/aburkut/vector)
 
-The library provides Vector class that supports core operations for mathematical 2d and 3d vectors (add, sub, cross product, dot product).
+The library provides Vector class that supports core operations for mathematical 2d and 3d vectors (add, sub, mul, div, cross product, dot product).
 
 ## NPM scripts
 
