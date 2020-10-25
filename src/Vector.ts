@@ -47,7 +47,7 @@ export default class Vector {
     if(this.z === undefined) {
       return true;
     }
-    
+
     return false;
   }
 
@@ -67,7 +67,7 @@ export default class Vector {
     const z = vector.getZ();
 
     if(z === undefined) {
-      return  [x ,y ];
+      return  [ x ,y ];
     }
 
     return [ x, y, z ];
@@ -76,11 +76,11 @@ export default class Vector {
   // (u1, u2, u3) + (v1, v2, v3) = (u1 + v1, u2 + v2, u3 + v3)
   public add(vector: Vector | CoordsArray): CoordsArray {
     const [ u1, u2, u3 ] = this.getCoords();
-    const [ v1, v2, v3 ] = this.getInputCoords(vector)
+    const [ v1, v2, v3 ] = this.getInputCoords(vector);
 
     const resultX = u1 + v1;
     const resultY = u2 + v2;
-  
+
     if(this.is2d()) {
       return [ resultX, resultY ];
     }
@@ -106,36 +106,36 @@ export default class Vector {
 
     return [ resultX, resultY, resultZ ];
   }
-  
+
   // (u1, u2, u3) x f = (u1 x f, u2 x f, u3 x f)
   public mul(value: number): CoordsArray {
     const [ u1, u2, u3 ] = this.getCoords();
-  
+
     const resultX = u1 * value;
     const resultY = u2 * value;
-    
+
     if(this.is2d()) {
       return [ resultX, resultY ];
     }
 
     const resultZ = u3 * value;
-  
+
     return [ resultX, resultY, resultZ ];
   }
 
   // (u1, u2, u3) / f = (u1 / f, u2 / f, u3 / f)
   public div(value: number): CoordsArray {
     const [ u1, u2, u3 ] = this.getCoords();
-  
+
     const resultX = u1 / value;
     const resultY = u2 / value;
-  
+
     if(this.is2d()) {
       return [ resultX, resultY ];
     }
-  
+
     const resultZ = u3 / value;
-  
+
     return [ resultX, resultY, resultZ ];
   }
 
@@ -165,7 +165,7 @@ export default class Vector {
     if((this.is2d() && inputCoords.length === 3) || (! this.is2d() && inputCoords.length === 2)) {
       throw new Error('Vectors have unequal dimensions');
     }
-    
+
     if(this.is2d()) {
       return u1 * v1 + u2 * v2;
     }
