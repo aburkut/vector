@@ -7,7 +7,7 @@ module.exports = {
   clearMocks: true,
   collectCoverage: true,
   verbose: true,
-  silent: true,
+  silent: false,
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: [
     '/node_modules/',
