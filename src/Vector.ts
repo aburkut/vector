@@ -1,5 +1,5 @@
 
-export type CoordsArray = [ number, number, number ] | [ number, number ] | number[];
+export type CoordsArray = [ number, number, number ] | [ number, number ];
 
 export default class Vector {
 

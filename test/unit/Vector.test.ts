@@ -16,7 +16,7 @@ describe('Vector class', () => {
   describe('add method', () => {
     it('should solve "vector add operation" for (1, 0) + (-1, 4)', () => {
       const a = new Vector(1, 0);
-      const bCoords = [ -1, 4 ];
+      const bCoords: [ number, number ] = [ -1, 4 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = [ 0, 4 ];
@@ -27,7 +27,7 @@ describe('Vector class', () => {
   
     it('should solve "vector add operation" for (0, 0) + (1, 1)', () => {
       const a = new Vector(0, 0);
-      const bCoords = [ 1, 1 ];
+      const bCoords: [ number, number ] = [ 1, 1 ];
       const bVector = new Vector(bCoords);
   
       const expectedResult = [ 1, 1 ];
@@ -38,7 +38,7 @@ describe('Vector class', () => {
 
     it('should solve "vector add operation" for (1, 0, 3) + (-1, 4, 2)', () => {
       const a = new Vector(1, 0,3);
-      const bCoords = [ -1, 4, 2 ];
+      const bCoords: [ number, number, number ] = [ -1, 4, 2 ];
       const bVector = new Vector(bCoords);
   
       const expectedResult = [ 0, 4, 5 ];
@@ -49,7 +49,7 @@ describe('Vector class', () => {
   
     it('should solve "vector add operation" for (0, 0, 1) + (1, 1, 1)', () => {
       const a = new Vector(0, 0,1);
-      const bCoords = [ 1, 1, 1 ];
+      const bCoords: [ number, number, number ] = [ 1, 1, 1 ];
       const bVector = new Vector(bCoords);
 
       const expectedResult = [ 1, 1, 2 ];
@@ -60,7 +60,7 @@ describe('Vector class', () => {
   
     it('should solve "vector add operation" for (0, 0, 0) + (0, 0, 0)', () => {
       const a = new Vector(0, 0,0);
-      const bCoords = [ 0, 0, 0 ];
+      const bCoords: [ number, number, number ] = [ 0, 0, 0 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = [ 0, 0, 0 ];
@@ -73,7 +73,7 @@ describe('Vector class', () => {
   describe('sub method', () => {
     it('should solve "vector add operation" for (1, 0) - (-1, 4)', () => {
       const a = new Vector(1, 0);
-      const bCoords = [ -1, 4 ];
+      const bCoords: [ number, number ] = [ -1, 4 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = [ 2, -4 ];
@@ -84,7 +84,7 @@ describe('Vector class', () => {
   
     it('should solve "vector add operation" for (0, 0) - (1, 1)', () => {
       const a = new Vector(0, 0);
-      const bCoords = [ 1, 1 ];
+      const bCoords: [ number, number ] = [ 1, 1 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = [ -1, -1 ];
@@ -95,7 +95,7 @@ describe('Vector class', () => {
 
     it('should solve "vector sub operation" for (1, 0, 3) - (-1, 4, 2)', () => {
       const a = new Vector(1, 0,3);
-      const bCoords = [ -1, 4, 2 ];
+      const bCoords: [ number, number, number ] = [ -1, 4, 2 ];
       const bVector = new Vector(bCoords);
   
       const expectedResult = [ 2, -4, 1 ];
@@ -106,7 +106,7 @@ describe('Vector class', () => {
   
     it('should solve "vector add operation" for (0, 0, 1) - (1, 1, 1)', () => {
       const a = new Vector(0, 0,1);
-      const bCoords = [ 1, 1, 1 ];
+      const bCoords: [ number, number, number ] = [ 1, 1, 1 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = [ -1, -1, 0 ];
@@ -155,7 +155,7 @@ describe('Vector class', () => {
   describe('cross method', () => {
     it('should throw an error for 2d vectors (1, 0) x (-1, 4)', () => {
       const a = new Vector(1, 0);
-      const bCoords = [ -1, 4 ];
+      const bCoords: [ number, number ] = [ -1, 4 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = 'The cross method is supported just for 3d vectors';
@@ -166,7 +166,7 @@ describe('Vector class', () => {
   
     it('should throw an error for cross product between 2d and 3d (1, 0, 1) x (-1, 4)', () => {
       const a = new Vector(1, 0, 1);
-      const bCoords = [ -1, 4 ];
+      const bCoords: [ number, number ] = [ -1, 4 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = 'The cross method is supported just for 3d vectors';
@@ -177,7 +177,7 @@ describe('Vector class', () => {
     
     it('should solve "vector cross product operation" for (1, 0, 3) x (-1, 4, 2)', () => {
       const a = new Vector(1, 0,3);
-      const bCoords = [ -1, 4, 2 ];
+      const bCoords: [ number, number, number ] = [ -1, 4, 2 ];
       const bVector = new Vector(bCoords);
   
       const expectedResult = [ -12, -5, 4 ];
@@ -188,7 +188,7 @@ describe('Vector class', () => {
   
     it('should solve "vector cross product operation" for (-1, -1, -1) x (-1, -1, -1)', () => {
       const a = new Vector(-1, -1,-1);
-      const bCoords = [ -1, -1, -1 ];
+      const bCoords: [ number, number, number ] = [ -1, -1, -1 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = [ 0, 0, 0 ];
@@ -199,7 +199,7 @@ describe('Vector class', () => {
   
     it('should solve "vector cross product operation" for (100, 300, 5000) x (1000, -3000, -1000)', () => {
       const a = new Vector(100, 300,5000);
-      const bCoords = [ 1000, -3000, -1000 ];
+      const bCoords: [ number, number, number ] = [ 1000, -3000, -1000 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = [ 14700000, 5100000, -600000 ];
@@ -212,7 +212,7 @@ describe('Vector class', () => {
   describe('dot method', () => {
     it('should throw an error  if vectors have unequal dimensions (1, 0, 1) x (-1, 4)', () => {
       const a = new Vector(1, 0, 1);
-      const bCoords = [ -1, 4 ];
+      const bCoords: [ number, number ] = [ -1, 4 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = 'Vectors have unequal dimensions';
@@ -223,7 +223,7 @@ describe('Vector class', () => {
   
     it('should throw an error  if vectors have unequal dimensions (1, 0) x (-1, 4, -5)', () => {
       const a = new Vector(1, 0);
-      const bCoords = [ -1, 4, -5 ];
+      const bCoords: [ number, number, number ] = [ -1, 4, -5 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = 'Vectors have unequal dimensions';
@@ -234,7 +234,7 @@ describe('Vector class', () => {
   
     it('should solve "vector dot product operation" for (1, 10) . (-1, 4000)', () => {
       const a = new Vector(1, 10);
-      const bCoords = [ -1, 4000 ];
+      const bCoords: [ number, number ] = [ -1, 4000 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = 39999;
@@ -245,7 +245,7 @@ describe('Vector class', () => {
 
     it('should solve "vector dot product operation" for (1, 0, 3) . (-1, 4, 2)', () => {
       const a = new Vector(1, 0,3);
-      const bCoords = [ -1, 4, 2 ];
+      const bCoords: [ number, number, number ] = [ -1, 4, 2 ];
       const bVector = new Vector(bCoords);
   
       const expectedResult = 5;
@@ -256,7 +256,7 @@ describe('Vector class', () => {
   
     it('should solve "vector dot product operation" for (100, 300, 5000) x (1000, -3000, -1000)', () => {
       const a = new Vector(100, 300,5000);
-      const bCoords = [ 1000, -3000, -1000 ];
+      const bCoords: [ number, number, number ] = [ 1000, -3000, -1000 ];
       const bVector = new Vector(bCoords);
     
       const expectedResult = -5800000;
