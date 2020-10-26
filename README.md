@@ -1,4 +1,4 @@
-# Vector [![Build Status](https://travis-ci.com/aburkut/vector.svg?branch=master)](https://travis-ci.com/aburkut/vector) [![codecov](https://codecov.io/gh/aburkut/vector/branch/master/graph/badge.svg?token=TH0mD5H3qx)](undefined)
+# Vector [![Build Status](https://travis-ci.com/aburkut/vector.svg?branch=master)](https://travis-ci.com/aburkut/vector) [![codecov](https://codecov.io/gh/aburkut/vector/branch/master/graph/badge.svg?token=TH0mD5H3qx)](https://codecov.io/gh/aburkut/vector)
 
 
 The library provides Vector class that supports core operations for mathematical 2d and 3d vectors (add, sub, mul, div, cross product, dot product).
